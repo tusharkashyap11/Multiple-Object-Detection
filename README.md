@@ -8,7 +8,7 @@ This project demonstrates the usage of a pre-trained model in TensorFlow.js for 
 
 1. Clone the repository:
 ```
-git clone https://github.com/
+git clone https://github.com/tusharkashyap11/Multiple-Object-Detection.git
 ```
 2. Navigate to the project directory:
 ```
