@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple object detection</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tushar Kashyap">
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <h1 class="intro">Multiple object detection</h1>
+  
+    <h2>How to use</h2>
+    <p class="exclude">Please wait for the model to load before trying the demos below at which point they will become visible when ready to use.</p>
+    
+    <section id="demos" class="invisible">
+      <h2>Demo: Classifying Images</h2>
+      <p class="exclude"><em>Click on the image below </em> to try and recognize what is in the image using the power of Machine Learning! Notice how in this demo we not only know if the object is in the image, but also its position in the image. Very useful.</p>
+      <br>
+      <input type="file" id="image-input" accept="image/*">
+      <button id="clear-button">Clear Overlays</button>
+      <br>
+      <div class="classifyOnClick">
+        <img id="uploaded-image" src="media/fruits.jpg" width="100%" crossorigin="anonymous" title="Click to get classification!" />
+        <canvas id="result-canvas"></canvas>
+      </div>
+
+
+      <h2>Demo: Webcam continuous classification</h2>
+      <p class="exclude">Hold some objects up close to your webcam to get a real-time classification! You must be on <a href="https://codepen.io/tusharkashyap11/pen/oNaMYjN">the https version of the website</a> for this to work. When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+      
+      <div id="liveView" class="videoView">
+        <button id="webcamButton">Enable Webcam</button>
+        <video id="webcam" autoplay></video>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="footer-info">
+        <p class="exclude">Tushar Kashyap &copy; 2023 </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://twitter.com/"><img src="./icons/twt.png"></a>
+        <a href="https://www.linkedin.com/in/tusharkashyap11/"><img src="./icons/lk.png"></a>
+        <a href="https://github.com/tusharkashyap11"><img src="./icons/gh.png"></a>
+      </div>
+    </footer>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js" type="text/javascript"></script>
+    
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
